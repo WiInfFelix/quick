@@ -1,0 +1,9 @@
+{% if latest_organisations_list %}
+    <ul>
+    {% for org in latest_organisations_list %}
+        <li><a href="/organisations/{{ org.id }}/">{{ org.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No organisations have been created.</p>
+{% endif %}
