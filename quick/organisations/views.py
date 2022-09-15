@@ -17,3 +17,9 @@ class IndexView(generic.ListView):
 class DetailView(generic.DetailView):
     model = Organisation
     template = "organisations/detail.html"
+
+
+class OrganisationCreateView(generic.CreateView):
+    model = Organisation
+    fields = ["name"]
+    template = "organisation_form.html"
